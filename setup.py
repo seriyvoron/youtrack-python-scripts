@@ -24,7 +24,7 @@ with open(path.join(here, 'version')) as f:
 setup(
     name='youtrack-scripts',
     version=version,
-    python_requires='>=2.6, <3',
+    python_requires='>3',
     packages=['youtrackutils',
               'youtrackutils.bugzilla',
               'youtrackutils.csvClient',
@@ -56,13 +56,13 @@ setup(
     },
     install_requires=[
         "python-dateutil",
-        "youtrack == 0.1.12",
+        "youtrack == 0.1.69",
         "pyactiveresource",        # for Redmine import script
         # Commented out because the package installation can fail in case
         # if mysql is not installed on local machine
         # "MySQL-python",            # for BugZilla and Mantis import scripts
-        "BeautifulSoup >= 3.2.0",  # for FogBugz import script
-        "Trac >= 1.0.1",           # for Track import script
+        "BeautifulSoup",  # for FogBugz import script
+        "Trac",           # for Track import script
         "requests"                 # for github import script,
     ]
 )
